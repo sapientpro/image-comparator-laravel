@@ -15,7 +15,7 @@ use SapientPro\ImageComparatorLaravel\ComparatorService;
  * @method static GdImage|false squareImage(string $image)
  * @method static float|array compareSquareImages(string $sourceImage, string|array $images, ImageRotationAngle $rotationAngle = ImageRotationAngle::D0, int $precision = 1)
  * @method static array hashImage(string|GdImage $image, ImageRotationAngle $rotationAngle = ImageRotationAngle::D0, int $size = 8)
- * @method static string convertToBinaryString(array $hash)
+ * @method static string convertHashToBinaryString(array $hash)
  * @method static float compareHashStrings(string $hash1, string $hash2)
  *
  * @see ComparatorService

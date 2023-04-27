@@ -90,7 +90,7 @@ class ComparatorService
         return $this->imageComparator->hashImage($image, $rotationAngle, $size);
     }
 
-    public function convertToBinaryString(array $hash): string
+    public function convertHashToBinaryString(array $hash): string
     {
         return $this->imageComparator->convertHashToBinaryString($hash);
     }
