@@ -1,0 +1,49 @@
+{
+  "name": "sapientpro/image-comparator-laravel",
+  "description": "Compare images using Laravel",
+  "license": [
+    "MIT"
+  ],
+  "authors": [
+    {
+      "name": "SapientPro",
+      "email": "info@sapient.pro",
+      "homepage": "https://sapient.pro/"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "ext-gd": "*",
+    "sapientpro/image-comparator": "^1.0",
+    "illuminate/support": "^10.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "SapientPro\\ImageComparatorLaravel\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SapientPro\\ImageComparatorLaravel\\Tests\\": "tests"
+    }
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "3.7.2",
+    "phpunit/phpunit": "^10.0",
+    "orchestra/testbench": "^8.0"
+  },
+  "scripts": {
+    "phpcs": "vendor/bin/phpcs .",
+    "tests-unit": "vendor/bin/phpunit --testsuite=unit"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "SapientPro\\ImageComparatorLaravel\\Providers\\ComparatorServiceProvider"
+      ],
+      "aliases": {
+        "Comparator": "SapientPro\\ImageComparatorLaravel\\Comparator\\Facades\\Comparator"
+      }
+    }
+  }
+}
