@@ -4,20 +4,21 @@ namespace SapientPro\ImageComparatorLaravel\Tests\Unit;
 
 use Orchestra\Testbench\TestCase;
 use SapientPro\ImageComparator\Enum\ImageRotationAngle;
+use SapientPro\ImageComparator\Strategy\DifferenceHashStrategy;
 use SapientPro\ImageComparatorLaravel\Facades\Comparator;
 
 class ComparatorTest extends TestCase
 {
     public function testCompareImages(): void
     {
-        $similarity = Comparator::compareImages(
+        $similarity = Comparator::compare(
             'tests/images/ebay-image.png',
             'tests/images/amazon-image.png'
         );
 
         $this->assertSame(87.5, $similarity);
 
-        $similarityArray = Comparator::compareImages(
+        $similarityArray = Comparator::compareArray(
             'tests/images/ebay-image.png',
             [
                 'amazon1' => 'tests/images/amazon-image.png',
@@ -33,14 +34,14 @@ class ComparatorTest extends TestCase
 
     public function testDetectSimilarities(): void
     {
-        $similarity = Comparator::detectImageSimilarity(
+        $similarity = Comparator::detect(
             'tests/images/ebay-image.png',
             'tests/images/amazon-image.png'
         );
 
         $this->assertSame(87.5, $similarity);
 
-        $similarityArray = Comparator::detectImageSimilarity(
+        $similarityArray = Comparator::detectArray(
             'tests/images/ebay-image.png',
             [
                 'amazon1' => 'tests/images/amazon-image.png',
@@ -63,7 +64,7 @@ class ComparatorTest extends TestCase
         );
         $this->assertSame(16, count($hash));
 
-        Comparator::setDifferenceHashStrategy();
+        Comparator::setHashStrategy(new DifferenceHashStrategy());
 
         $this->assertSame(64, count(Comparator::hashImage('tests/images/amazon-image.png')));
     }
@@ -76,16 +77,5 @@ class ComparatorTest extends TestCase
         $height = imagesy($squareImage);
 
         $this->assertSame($width, $height);
-    }
-
-    public function testCompareSquareImages(): void
-    {
-        $similarity = Comparator::compareSquareImages(
-            'tests/images/ebay-image.png',
-            'tests/images/amazon-image.png',
-            precision: 2
-        );
-
-        $this->assertSame(100.00, $similarity);
     }
 }
