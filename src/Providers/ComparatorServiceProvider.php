@@ -9,6 +9,8 @@ class ComparatorServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
-        //
+        $this->app->singleton(ImageComparator::class, function () {
+            return new ImageComparator();
+        });
     }
 }
