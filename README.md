@@ -1,5 +1,9 @@
 # Image Comparator Laravel: Compare images using Laravel
 
+![https://packagist.org/packages/sapientpro/image-comparator-laravel](https://img.shields.io/packagist/dt/sapientpro/image-comparator-laravel)
+![https://packagist.org/packages/sapientpro/image-comparator-laravel](https://img.shields.io/packagist/v/sapientpro/image-comparator-laravel)
+![https://packagist.org/packages/sapientpro/image-comparator-laravel](https://img.shields.io/packagist/l/sapientpro/image-comparator-laravel)
+
 This package is a wrapper of [Image Comparator package](https://github.com/sapientpro/image-comparator)
 adapted to use with Laravel via Facade. All methods of Image Comparator are available in the Facade.
 For the method reference visit the [wiki](https://github.com/sapientpro/image-comparator/wiki)
