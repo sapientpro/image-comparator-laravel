@@ -8,6 +8,7 @@ use SapientPro\ImageComparator\Enum\ImageRotationAngle;
 use SapientPro\ImageComparator\ImageComparator;
 use SapientPro\ImageComparator\Strategy\HashStrategy;
 
+// phpcs:disable Generic.Files.LineLength.TooLong
 /**
  * @method static void setHashStrategy(HashStrategy $hashStrategy)
  * @method static float compare(GdImage|string $sourceImage, GdImage|string $comparedImage, ImageRotationAngle $rotation = ImageRotationAngle::D0, int $precision = 1)
@@ -19,6 +20,7 @@ use SapientPro\ImageComparator\Strategy\HashStrategy;
  * @method static GdImage|false squareImage(string $image)
  * @method static string convertHashToBinaryString(array $hash)
  */
+// phpcs:enable Generic.Files.LineLength.TooLong
 class Comparator extends Facade
 {
     protected static function getFacadeAccessor(): string
