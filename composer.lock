@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "acefd847ae41662a48ce1a0401a17fe3",
+    "content-hash": "e977de0446708bc1bab6bac84e33d5e8",
     "packages": [
         {
             "name": "brick/math",
@@ -2910,16 +2910,16 @@
         },
         {
             "name": "sapientpro/image-comparator",
-            "version": "v1.1.0",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sapientpro/image-comparator.git",
-                "reference": "dfa3be35ad91d18bc4151c19cda2d0c8c121b86f"
+                "reference": "c897d11cf669fd11609b3d50df19706ae0262628"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sapientpro/image-comparator/zipball/dfa3be35ad91d18bc4151c19cda2d0c8c121b86f",
-                "reference": "dfa3be35ad91d18bc4151c19cda2d0c8c121b86f",
+                "url": "https://api.github.com/repos/sapientpro/image-comparator/zipball/c897d11cf669fd11609b3d50df19706ae0262628",
+                "reference": "c897d11cf669fd11609b3d50df19706ae0262628",
                 "shasum": ""
             },
             "require": {
@@ -2951,9 +2951,9 @@
             "description": "Compare images using PHP",
             "support": {
                 "issues": "https://github.com/sapientpro/image-comparator/issues",
-                "source": "https://github.com/sapientpro/image-comparator/tree/v1.1.0"
+                "source": "https://github.com/sapientpro/image-comparator/tree/v1.2.0"
             },
-            "time": "2024-09-20T10:44:37+00:00"
+            "time": "2025-01-13T09:41:14+00:00"
         },
         {
             "name": "symfony/clock",

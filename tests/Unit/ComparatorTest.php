@@ -16,7 +16,7 @@ class ComparatorTest extends TestCase
             'tests/images/amazon-image.png'
         );
 
-        $this->assertSame(87.5, $similarity);
+        $this->assertSame(86.994, $similarity);
 
         $similarityArray = Comparator::compareArray(
             'tests/images/ebay-image.png',
@@ -27,8 +27,8 @@ class ComparatorTest extends TestCase
         );
 
         $this->assertSame([
-            'amazon1' => 87.5,
-            'amazon2' => 53.1
+            'amazon1' => 86.994,
+            'amazon2' => 43.436
         ], $similarityArray);
     }
 
@@ -39,7 +39,7 @@ class ComparatorTest extends TestCase
             'tests/images/amazon-image.png'
         );
 
-        $this->assertSame(87.5, $similarity);
+        $this->assertSame(86.994, $similarity);
 
         $similarityArray = Comparator::detectArray(
             'tests/images/ebay-image.png',
@@ -50,8 +50,8 @@ class ComparatorTest extends TestCase
         );
 
         $this->assertSame([
-            'amazon1' => 87.5,
-            'amazon2' => 62.5
+            'amazon1' => 86.994,
+            'amazon2' => 48.59
         ], $similarityArray);
     }
 
